@@ -1,0 +1,55 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-strength
+------------------------------
+*/
+.top-strength {
+    background-color: var(--color-gray);
+}
+
+.top-strength-title {
+
+}
+
+.top-strength-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 40px;
+
+    @include g.mq() {
+        margin-top: 60px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.top-strength-item {
+    background-color: var(--color-white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 60px 0 20px;
+
+    @include g.mq() {
+    padding: 85px 0 50px;
+    }
+}
+
+.top-strength-img {
+    width: 60px;
+    aspect-ratio: 1/1;
+    margin-inline: auto;
+}
+
+.top-strength-item-title {
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+.top-strength-item-text {
+    margin-top: 20px;
+    span {
+        display: block;
+    }
+}
+

@@ -1,0 +1,40 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-news
+------------------------------
+*/
+.top-news {
+    background-color: var(--color-white);
+}
+
+.top-news-title {
+
+}
+
+.top-news-archive {
+    margin-top: 40px;
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}
+
+.top-news-btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (any-hover: hover) {
+        &:hover{
+            .c-button {
+                background-color: var(--color-gray);
+                color: var(--color-navy);
+            }
+        }
+    }
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}

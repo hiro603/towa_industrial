@@ -1,0 +1,36 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-contact
+------------------------------
+*/
+.top-contact {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+.top-contact-title {
+
+}
+
+.top-contact-text {
+    margin-top: 40px;
+    text-align: center;
+    span {
+        display: block;
+    }
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}
+
+.top-contact-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,36 @@
+@use "../global" as g;
+
+/*!
+component > news-item
+------------------------------
+*/
+.c-news-item {
+
+}
+
+.c-news-item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-bottom: 1px solid var(--color-gray);
+    padding: 16px 10px;
+
+    @include g.mq() {
+        align-items: center;
+        flex-direction: row;
+        gap: 40px;
+        padding: 24px 20px;
+    }
+}
+
+.c-news-item-date {
+    color: var(--color-date);
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    font-family: var(--font-family-en);
+}
+
+.c-news-item-title {
+    font-size: 1rem;
+}
+

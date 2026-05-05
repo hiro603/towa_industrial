@@ -1,0 +1,50 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-recruit
+------------------------------
+*/
+.top-recruit {
+    background-color: var(--color-gray);
+}
+
+.top-recruit-title {
+
+}
+
+.top-recruit-message {
+    margin-top: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    @include g.mq() {
+        margin-top: 60px;
+        font-size: 2rem;
+    }
+}
+
+.top-recruit-text {
+    margin-top: 20px;
+    text-align: center;
+    span {
+        display: block;
+    }
+}
+
+.top-recruit-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media (any-hover: hover) {
+        &:hover{
+            .c-button {
+                background-color: var(--color-gray);
+                color: var(--color-navy);
+            }
+        }
+    }
+}
+

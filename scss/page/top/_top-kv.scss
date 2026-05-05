@@ -1,0 +1,103 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+.top-kv {
+    background-image: url(../img/fv.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.top-kv-content {
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    text-align: right;
+}
+
+.top-kv-text {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    font-weight: bold;
+
+    @include g.mq() {
+        font-size: 3rem;
+    }
+
+    span {
+        display: block;
+
+        @include g.mq() {
+            display: inline;
+        }
+    }
+}
+
+.top-kv-text-message {
+    font-size: 16px;
+    color: var(--color-white);
+    font-weight: bold;
+    margin-top: 24px;
+
+    @include g.mq() {
+        font-size: 24px;
+    }
+
+    span {
+        display: block;
+
+        @include g.mq() {
+            display: inline;
+        }
+    }
+}
+
+.top-kv-btn {
+    margin-top: 60px;
+    display: flex;
+    justify-content: end;
+
+    @media (any-hover: hover) {
+        &:hover{
+            .c-button {
+                background-color: var(--color-white);
+                color: var(--color-navy);
+            }
+        }
+    }
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease-in-out forwards;
+}
+
+.delay1 {
+    animation-delay: 0.2s;
+}
+
+.delay2 {
+    animation-delay: 0.4s;
+}
+
+.delay3 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
