@@ -19,7 +19,7 @@ export const initializeHeaderBackgroundToggle = () => {
     };
 
     const setTransparentBackground = () => {
-        headerElement.classList.pxove(headerActiveClass);
+        headerElement.classList.remove(headerActiveClass);
         gsap.to(headerElement, {
             backgroundColor: 'rgba(255, 255, 255, 0)',
             boxShadow: '0 7px 30px 0 rgba(100, 100, 111, 0)',

@@ -4,20 +4,20 @@
 page > service > service-cta
 ------------------------------
 */
-.service-cta {
+.l-cta {
     background-image: url(../../../assets/img/service/service-cta.webp);
     background-size: cover;
     background-position: center;
     width: 100vw;
 }
 
-.service-cta-content {
+.l-cta-content {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.service-cta-title {
+.l-cta-title {
     color: var(--color-white);
     font-size: clamp(24px, 4vw, 36px);
     font-weight: bold;
@@ -25,7 +25,7 @@ page > service > service-cta
     line-height: 1;
 }
 
-.service-cta-text {
+.l-cta-text {
     color: var(--color-white);
 
     span {
@@ -34,7 +34,7 @@ page > service > service-cta
 
 }
 
-.service-cta-btn-link {
+.l-cta-btn-link {
     display: flex;
     align-items: center;
     gap: 10px;

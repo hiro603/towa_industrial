@@ -9,9 +9,13 @@ global > color
   --color-navy: #1e3a5f;
   --color-font-base: #333333;
   --color-font-en: #888888;
+  --color-font-light: #cccccc;
   --color-bg-footer: #162F4A;
   --color-date: #888888;
   --color-blue: #1136ef;
+  --color-bg-border: #484848;
+  --color-bg-dark: #343030;
+  --color-bg-black: #000;
 }
 
 /*!
@@ -495,7 +499,7 @@ layout > header
   }
 }
 
-.header-logo {
+.l-header-logo {
   font-size: 1.25rem;
   font-weight: bold;
   line-height: 1;
@@ -503,7 +507,7 @@ layout > header
   color: var(--color-white);
 }
 @media screen and (min-width: 768px) {
-  .header-logo {
+  .l-header-logo {
     font-size: 2rem;
   }
 }
@@ -796,6 +800,15 @@ page > top > top-kv
   width: 100%;
   height: 90vh;
   position: relative;
+  overflow: hidden;
+}
+.top-kv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 6, 23, 0.78)), color-stop(45%, rgba(2, 6, 23, 0.48)), to(rgba(2, 6, 23, 0.2)));
+  background: linear-gradient(90deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.48) 45%, rgba(2, 6, 23, 0.2) 100%);
+  z-index: 1;
 }
 
 .top-kv-content {
@@ -1315,6 +1328,24 @@ page > service > service-detail
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
+  .service-detail-item:nth-child(odd) .service-detail-content {
+    position: relative;
+  }
+  .service-detail-item:nth-child(odd) .service-detail-content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-image: url(../../../assets/img/service/chevron-right.svg);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    padding-right: 50px;
+  }
   .service-detail-item:nth-child(2n) .service-detail-img {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -1322,6 +1353,25 @@ page > service > service-detail
   .service-detail-item:nth-child(2n) .service-detail-content {
     grid-column: 1/2;
     grid-row: 1/2;
+    position: relative;
+    margin-left: 50px;
+  }
+  .service-detail-item:nth-child(2n) .service-detail-content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-image: url(../../../assets/img/service/chevron-right.svg);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    padding-left: 50px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
@@ -1429,6 +1479,15 @@ page > service > service-fv
   position: relative;
   width: 100vw;
   height: 90vh;
+  overflow: hidden;
+}
+.service-fv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 6, 23, 0.78)), color-stop(45%, rgba(2, 6, 23, 0.48)), to(rgba(2, 6, 23, 0.2)));
+  background: linear-gradient(90deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.48) 45%, rgba(2, 6, 23, 0.2) 100%);
+  z-index: 1;
 }
 
 .service-fv-content {
@@ -1437,6 +1496,7 @@ page > service > service-fv
   left: clamp(24px, 8vw, 120px);
   -webkit-transform: translateY(-30%);
           transform: translateY(-30%);
+  z-index: 2;
 }
 
 .service-fv-title-wrap {
@@ -1627,14 +1687,14 @@ page > service > service-flow
 page > service > service-cta
 ------------------------------
 */
-.service-cta {
+.l-cta {
   background-image: url(../../../assets/img/service/service-cta.webp);
   background-size: cover;
   background-position: center;
   width: 100vw;
 }
 
-.service-cta-content {
+.l-cta-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1645,7 +1705,7 @@ page > service > service-cta
   gap: 40px;
 }
 
-.service-cta-title {
+.l-cta-title {
   color: var(--color-white);
   font-size: clamp(24px, 4vw, 36px);
   font-weight: bold;
@@ -1653,14 +1713,14 @@ page > service > service-cta
   line-height: 1;
 }
 
-.service-cta-text {
+.l-cta-text {
   color: var(--color-white);
 }
-.service-cta-text span {
+.l-cta-text span {
   display: block;
 }
 
-.service-cta-btn-link {
+.l-cta-btn-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1672,7 +1732,7 @@ page > service > service-cta
   height: 54px;
   padding: 8px 16px;
 }
-.service-cta-btn-link::before {
+.l-cta-btn-link::before {
   content: "";
   display: block;
   width: 30px;
@@ -1689,7 +1749,7 @@ page > service > service-cta
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.service-cta-btn-link::after {
+.l-cta-btn-link::after {
   content: "";
   display: inline-block;
   width: 30px;
@@ -1707,10 +1767,10 @@ page > service > service-cta
   transition: background-color 0.3s;
 }
 @media (any-hover: hover) {
-  .service-cta-btn-link:hover::before {
+  .l-cta-btn-link:hover::before {
     background-color: var(--color-navy);
   }
-  .service-cta-btn-link:hover::after {
+  .l-cta-btn-link:hover::after {
     background-color: var(--color-navy);
   }
 }
@@ -1743,6 +1803,228 @@ page > contact > contact-form
 page > works > works-list
 ------------------------------
 */
+.works-fv {
+  background-image: url(../../../assets/img/works/works-fv.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+.works-fv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 6, 23, 0.78)), color-stop(45%, rgba(2, 6, 23, 0.48)), to(rgba(2, 6, 23, 0.2)));
+  background: linear-gradient(90deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.48) 45%, rgba(2, 6, 23, 0.2) 100%);
+  z-index: 1;
+}
+
+.works-fv-content {
+  z-index: 2;
+  position: relative;
+  top: 30%;
+  left: clamp(24px, 8vw, 120px);
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  color: var(--color-white);
+}
+
+.works-fv-title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.works-fv-title-en {
+  font-size: clamp(24px, 5vw, 120px);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.works-fv-title-ja {
+  font-size: clamp(24px, 4vw, 36px);
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.works-fv-text {
+  margin-top: 40px;
+  line-height: 1.8;
+}
+.works-fv-text span {
+  display: block;
+}
+
+/*!
+page > works > works-detail
+------------------------------
+*/
+.works-detail-category {
+  padding-block: 40px;
+  background-color: var(--color-bg-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  color: var(--color-white);
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-category {
+    gap: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.works-detail-category-item {
+  border-right: 1px solid var(--color-bg-border);
+  padding-right: 11px;
+}
+.works-detail-category-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-category-item {
+    padding-right: 41px;
+  }
+}
+
+.works-detail-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  background-color: var(--color-bg-black);
+  color: var(--color-white);
+}
+@media screen and (min-width: 768px) {
+  .works-detail-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.works-detail-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+
+.works-detail-content {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-content {
+    position: relative;
+  }
+  .works-detail-content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-white);
+    opacity: 0.5;
+    -webkit-mask-image: url("../../../../assets/img/works/chevron-right.svg");
+            mask-image: url("../../../../assets/img/works/chevron-right.svg");
+    -webkit-mask-size: contain;
+            mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+            mask-position: center;
+  }
+}
+
+.works-detail-content-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+}
+
+.works-detail-content-category {
+  font-size: 0.875rem;
+  color: var(--color-font-light);
+}
+
+.works-detail-content-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+.works-detail-content-text span {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .works-detail-btn {
+    grid-column: 2/3;
+  }
+}
+
+.works-detail-btn-link {
+  width: 300px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-white);
+  position: relative;
+  margin-top: 40px;
+  margin-inline: auto;
+}
+.works-detail-btn-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-white);
+  -webkit-mask-image: url("../../../../assets/img/works/chevron-right.svg");
+          mask-image: url("../../../../assets/img/works/chevron-right.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
 /*!
 page > about > about-philosophy
 ------------------------------
