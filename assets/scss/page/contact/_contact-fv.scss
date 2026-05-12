@@ -1,0 +1,70 @@
+@use "../../global" as g;
+
+/*!
+page > contact > contact-fv
+------------------------------
+*/
+.contact-fv {
+    background-image: url(../../../assets/img/service/service-fv.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 6, 23, 0.78) 0%,
+          rgba(2, 6, 23, 0.48) 45%,
+          rgba(2, 6, 23, 0.2) 100%
+        );
+        z-index: 1;
+      }
+}
+
+
+.contact-fv-content {
+    position: absolute;
+    top: 30%;
+    left: clamp(24px, 8vw, 120px);
+    transform: translateY(-30%);
+    z-index: 2;
+    color: var(--color-white);
+}
+
+.contact-fv-title-wrap {
+    display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-fv-title-en {
+    font-size: clamp(24px, 5vw, 120px);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-family: var(--font-family-en);
+}
+
+.contact-fv-title-ja {
+    color: var(--color-white);
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.contact-fv-text {
+    margin-top: 40px;
+  line-height: 1.8;
+
+  span {
+    display: block;
+  }
+}
+

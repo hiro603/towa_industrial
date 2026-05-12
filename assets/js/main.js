@@ -4,6 +4,7 @@ import { initializeCultureGallery } from "./slider/gallery-slider.js";
 import { initializeWorksSlider } from "./slider/works-slider.js";
 import { initializeStrengthFade } from "./fade/strength-fade.js";
 import { initializeQualityFade } from "./fade/quality-fade.js";
+import { initializeFormValidation } from "./form/form-validation.js";
 
 // 全ての初期化を実行
 initializeHamburgerMenu();
@@ -12,3 +13,4 @@ initializeCultureGallery();
 initializeWorksSlider();
 initializeStrengthFade();
 initializeQualityFade();
+initializeFormValidation();

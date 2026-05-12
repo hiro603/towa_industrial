@@ -26,6 +26,10 @@ utility > utility
     padding-top: clamp(64px, 8vw, 100px);
 }
 
+.u-pb {
+    padding-bottom: clamp(64px, 8vw, 100px);
+}
+
 .u-text-hover {
     background-image: linear-gradient(currentColor, currentColor);
     background-position: 0 100%;
