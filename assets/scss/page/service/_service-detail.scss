@@ -1,0 +1,118 @@
+@use "../../global" as g;
+
+/*!
+page > service > service-detail
+------------------------------
+*/
+.service-detail {
+    background-color: var(--color-gray);
+}
+
+.service-detail-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+
+    @include g.mq() {
+        gap: 0;
+    }
+}
+
+.service-detail-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include g.mq() {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+
+        &:nth-child(2n) {
+            .service-detail-img {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            
+            .service-detail-content {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+    }
+}
+}
+
+.service-detail-img {
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+
+        @include g.mq() {
+            aspect-ratio: 16/7;
+        }
+    }
+}
+
+.service-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include g.mq() {
+        margin-top: 40px;
+    }
+}
+
+.service-detail-content-title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-detail-content-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-detail-content-title-number {
+    color: var(--color-navy);
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    font-family: var(--font-family-en);
+
+    @include g.mq() {
+        font-size: 3rem;
+    }
+}
+
+.service-detail-content-title-en {
+    font-family: var(--font-family-en);
+    font-weight: bold;
+    color: var(--color-navy);
+    font-size: 0.875rem;
+
+    @include g.mq() {
+        font-size: 1rem;
+    }
+}
+
+.service-detail-content-title-ja {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+
+    @include g.mq() {
+        font-size: 2rem;
+    }
+}
+
+.service-detail-content-text {
+    line-height: 1.8;
+    span {
+        display: block;
+    }
+}
+

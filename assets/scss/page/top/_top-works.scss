@@ -1,0 +1,48 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-works
+------------------------------
+*/
+.top-works {
+}
+
+.top-works-title {
+
+}
+
+.top-works-slider {
+    margin-top: 40px;
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}
+
+.top-works-list {
+
+}
+
+.top-works-item {
+    
+}
+
+.top-works-img {
+    img {
+        border-radius: 6px;
+        width: 300px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+}
+
+.top-works-item-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.top-works-item-text {
+    margin-top: 10px;
+}
+

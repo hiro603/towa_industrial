@@ -1,0 +1,32 @@
+@use "../../global" as g;
+
+/*!
+page > service > service-introduction
+------------------------------
+*/
+.service-introduction {
+
+}
+
+.service-introduction-heading {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-align: center;
+    color: var(--color-font-base);
+}
+
+.service-introduction-text {
+    margin-top: 24px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-font-base);
+
+    @include g.mq() {
+        span {
+        display: block;
+    }
+    }
+}
+

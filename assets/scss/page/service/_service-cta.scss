@@ -1,0 +1,82 @@
+@use "../../global" as g;
+
+/*!
+page > service > service-cta
+------------------------------
+*/
+.service-cta {
+    background-image: url(../../../assets/img/service/service-cta.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+}
+
+.service-cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.service-cta-title {
+    color: var(--color-white);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.service-cta-text {
+    color: var(--color-white);
+
+    span {
+        display: block;
+    }
+
+}
+
+.service-cta-btn-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    height: 54px;
+    padding: 8px 16px;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        mask-image: url(../../../assets/img/service/icon-mail.png);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: var(--color-white);
+        transition: background-color 0.3s;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        mask-image: url(../../../assets/img/service/chevron-right.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: var(--color-white);
+        transition: background-color 0.3s;
+    }
+
+    @media (any-hover: hover) {
+        &:hover{
+            &::before {
+                background-color: var(--color-navy);
+            }
+
+            &::after {
+                background-color: var(--color-navy);
+            }
+        }
+    }
+}
