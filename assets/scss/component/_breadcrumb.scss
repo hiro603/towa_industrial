@@ -4,3 +4,30 @@
 component > breadcrumb
 ------------------------------
 */
+.c-breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.c-breadcrumb-item {
+    font-size: 0.875rem;
+    color: var(--color-font-light);
+
+    &:not(:last-child) {
+        &::after {
+            content: "/";
+            display: inline-block;
+            margin-left: 10px;
+            color: var(--color-font-light);
+        }
+    }
+}
+
+.c-breadcrumb-link {
+
+}
+
+.c-breadcrumb-item--current {
+    color: var(--color-navy);
+}

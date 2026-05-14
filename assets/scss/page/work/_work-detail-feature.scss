@@ -1,0 +1,93 @@
+@use "../../global" as g;
+
+/*!
+page > work > work-detail-content
+------------------------------
+*/
+.work-feature {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    @include g.mq() {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.work-feature-content {
+
+}
+
+.work-feature-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-navy);
+    line-height: 1.2;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: var(--color-navy);
+        margin-top: 20px;
+    }
+}
+
+.work-feature-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+
+    @include g.mq() {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.work-feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.work-feature-item-img {
+    width: 50px;
+}
+
+.work-feature-item-title {
+    color: var(--color-navy);
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.work-feature-item-text {
+    font-size: 0.875rem;
+
+    span {
+        display: block;
+    }
+}
+
+.work-feature-img-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+
+    @include g.mq() {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.work-feature-img-item {
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+}
+

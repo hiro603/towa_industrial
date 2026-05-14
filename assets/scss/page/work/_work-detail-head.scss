@@ -1,0 +1,98 @@
+@use "../../global" as g;
+
+/*!
+page > work > work-detail-head
+------------------------------
+*/
+
+.work-detail-head {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 120px;
+    background-color: var(--color-gray);
+
+    @include g.mq() {
+        grid-template-columns: 1fr 730px;
+        gap: 60px;
+    }
+}
+
+.work-detail-content {
+
+}
+
+.work-detail-breadcrumb {
+
+}
+
+.work-detail-content-title {
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--color-navy);
+}
+
+.work-detail-content-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.work-detail-content-title-wrap {
+    
+}
+
+.work-detail-content-category {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--color-navy);
+    margin-top: 20px;
+}
+
+.work-detail-content-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-navy);
+}
+.work-detail-content-text {
+    margin-top: 20px;
+
+    span {
+        display: block;
+    }
+}
+
+.work-detail-content-info {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 2px solid var(--color-font-light);
+}
+
+.work-detail-content-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.work-detail-content-info-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 60px;
+}
+
+.work-detail-content-info-item-title {
+    font-weight: bold;
+    color: var(--color-navy);
+}
+
+.work-detail-content-info-item-value {
+
+}
+
+.work-detail-img {
+    margin-top: 40px;
+}
+
