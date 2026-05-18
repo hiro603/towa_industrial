@@ -347,9 +347,54 @@ component > button
 }
 
 /*!
-component > entry-button
+component > table
 ------------------------------
 */
+.c-table {
+  overflow-x: auto;
+}
+
+.c-table-body {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.c-table-head,
+.c-table-data {
+  padding: 16px 24px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  text-align: left;
+}
+.c-table-head:last-child,
+.c-table-data:last-child {
+  border-right: none;
+}
+
+.c-table-head,
+.c-table-data {
+  width: 20%;
+}
+.c-table-head--sm,
+.c-table-data--sm {
+  width: 10%;
+}
+
+.c-table-head {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+.c-table-data:first-child {
+  font-weight: bold;
+  color: var(--color-navy);
+}
+.c-table-data span {
+  display: block;
+}
+
 /*!
 component > title
 ------------------------------
@@ -358,6 +403,9 @@ component > title
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
+}
+.c-title--center {
+  text-align: center;
 }
 
 .c-title-en {
@@ -1417,24 +1465,6 @@ page > service > service-detail
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
-  .service-detail-item:nth-child(odd) .service-detail-content {
-    position: relative;
-  }
-  .service-detail-item:nth-child(odd) .service-detail-content::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-image: url(../../../assets/img/service/chevron-right.svg);
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    padding-right: 50px;
-  }
   .service-detail-item:nth-child(2n) .service-detail-img {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -1444,23 +1474,6 @@ page > service > service-detail
     grid-row: 1/2;
     position: relative;
     margin-left: 50px;
-  }
-  .service-detail-item:nth-child(2n) .service-detail-content::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    background-image: url(../../../assets/img/service/chevron-right.svg);
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    padding-left: 50px;
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
   }
 }
 
@@ -1869,13 +1882,168 @@ page > news > news-archive
 ------------------------------
 */
 /*!
-page > recruit > recruit-position
+page > recruit > recruit-strength
 ------------------------------
 */
+.recruit-strength-title {
+  text-align: center;
+}
+
+.recruit-strength-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .recruit-strength-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+  }
+}
+
+.recruit-strength-item {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .recruit-strength-item {
+    border-right: 1px solid var(--color-gray);
+    padding-right: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .recruit-strength-item:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.recruit-strength-item-icon {
+  width: 50px;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+}
+
+.recruit-strength-item-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+.recruit-strength-item-text {
+  font-size: 0.875rem;
+}
+
+.recruit-strength-slider {
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .recruit-strength-slider {
+    margin-top: 60px;
+  }
+}
+
+.recruit-strength-slider-item {
+  width: 280px;
+  aspect-ratio: 1/1;
+}
+
+.recruit-strength-slider-img {
+  border-radius: 6px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*!
-page > recruit > recruit-benefit
+page > recruit > recruit-kv
 ------------------------------
 */
+.recruit-fv {
+  background-image: url(../../../assets/img/recruit/fv.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+}
+.recruit-fv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 6, 23, 0.78)), color-stop(45%, rgba(2, 6, 23, 0.48)), to(rgba(2, 6, 23, 0.2)));
+  background: linear-gradient(90deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.48) 45%, rgba(2, 6, 23, 0.2) 100%);
+  z-index: 1;
+}
+
+.recruit-fv-content {
+  position: absolute;
+  top: 30%;
+  left: clamp(24px, 8vw, 120px);
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  z-index: 2;
+  color: var(--color-white);
+}
+
+.recruit-fv-title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.recruit-fv-title-en {
+  font-size: clamp(24px, 5vw, 120px);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-family: var(--font-family-en);
+}
+
+.recruit-fv-title-ja {
+  color: var(--color-white);
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.recruit-fv-text-message {
+  margin-top: 40px;
+  line-height: 1.8;
+  font-size: clamp(24px, 5vw, 36px);
+  font-weight: bold;
+}
+.recruit-fv-text-message span {
+  display: block;
+}
+
+.recruit-fv-text {
+  margin-top: 40px;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+.recruit-fv-text span {
+  display: block;
+}
+
 /*!
 page > recruit > recruit-culture
 ------------------------------
@@ -1884,6 +2052,16 @@ page > recruit > recruit-culture
 page > recruit > recruit-entry
 ------------------------------
 */
+.recruit-entry-table {
+  margin-top: 40px;
+}
+
+.recruit-entry-text {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
 /*!
 page > contact > contact-form
 ------------------------------

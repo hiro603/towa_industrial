@@ -1,0 +1,53 @@
+@use "../global" as g;
+
+/*!
+component > table
+------------------------------
+*/
+.c-table {
+    overflow-x: auto;
+}
+
+.c-table-body {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+}
+
+    .c-table-head,
+    .c-table-data {
+        padding: 16px 24px;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        text-align: left;
+
+        &:last-child {
+            border-right: none;
+        }
+}
+
+.c-table-head,
+.c-table-data {
+    width: 20%;
+
+    &--sm {
+        width: 10%;
+    }
+}
+
+.c-table-head {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.c-table-data {
+
+    &:first-child {
+        font-weight: bold;
+        color: var(--color-navy);
+    }
+    span {
+        display: block;
+    }
+}

@@ -1,0 +1,80 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > recruit-kv
+------------------------------
+*/
+.recruit-fv {
+    background-image: url(../../../assets/img/recruit/fv.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 6, 23, 0.78) 0%,
+          rgba(2, 6, 23, 0.48) 45%,
+          rgba(2, 6, 23, 0.2) 100%
+        );
+        z-index: 1;
+      }
+}
+
+
+.recruit-fv-content {
+    position: absolute;
+    top: 30%;
+    left: clamp(24px, 8vw, 120px);
+    transform: translateY(-30%);
+    z-index: 2;
+    color: var(--color-white);
+}
+
+.recruit-fv-title-wrap {
+    display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recruit-fv-title-en {
+    font-size: clamp(24px, 5vw, 120px);
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-family: var(--font-family-en);
+}
+
+.recruit-fv-title-ja {
+    color: var(--color-white);
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.recruit-fv-text-message {
+    margin-top: 40px;
+    line-height: 1.8;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: bold;
+
+  span {
+    display: block;
+  }
+}
+.recruit-fv-text {
+    margin-top: 40px;
+    line-height: 1.8;
+    font-size: 1.125rem;
+    
+  span {
+    display: block;
+  }
+}

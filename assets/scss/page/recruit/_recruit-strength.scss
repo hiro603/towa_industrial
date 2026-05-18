@@ -1,0 +1,89 @@
+@use "../../global" as g;
+
+/*!
+page > recruit > recruit-strength
+------------------------------
+*/
+.recruit-strength {
+    
+}
+
+.recruit-strength-title {
+    text-align: center;
+}
+
+.recruit-strength-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+
+    @include g.mq() {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 60px;
+    }
+}
+
+.recruit-strength-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    @include g.mq() {
+        border-right: 1px solid var(--color-gray);
+        padding-right: 30px;
+    }
+
+    &:last-child {
+        @include g.mq() {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+}
+
+.recruit-strength-item-icon {
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin-inline: auto;
+}
+
+.recruit-strength-item-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: var(--color-navy);
+    line-height: 1.2;
+}
+
+.recruit-strength-item-text {
+    font-size: 0.875rem;
+}
+
+.recruit-strength-slider {
+    margin-top: 40px;
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}
+
+.recruit-strength-slider-list {
+
+}
+
+.recruit-strength-slider-item {
+    width: 280px;
+    aspect-ratio: 1/1;
+}
+
+.recruit-strength-slider-img {
+    // overflow: hidden;
+    border-radius: 6px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+
