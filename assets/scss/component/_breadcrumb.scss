@@ -12,14 +12,14 @@ component > breadcrumb
 
 .c-breadcrumb-item {
     font-size: 0.875rem;
-    color: var(--color-font-light);
+    color: var(--color-font-base);
 
     &:not(:last-child) {
         &::after {
             content: "/";
             display: inline-block;
             margin-left: 10px;
-            color: var(--color-font-light);
+            color: var(--color-font-base);
         }
     }
 }

@@ -8,9 +8,9 @@
         <meta name="format-detection" content="telephone=no, email=no" />
 
         <!-- favicon/webclipicon -->
-        <link rel="icon" href="assets/img/favicon.ico" />
-        <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="assets/img/webclip.png" />
+        <link rel="icon" href="assets/img/favicon/favicon.ico" />
+        <link rel="icon" href="assets/img/favicon/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="assets/img/fwebclip.png" />
 
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,6 +65,13 @@
                                 </li>
 
                                 <li class="l-header-menu-item">
+                                    <a href="recruit.html" class="l-header-menu-link u-text-hover">
+                                        <span class="l-header-menu-text-en">RECRUIT</span>
+                                        <span class="l-header-menu-text-ja">採用情報</span>
+                                    </a>
+                                </li>
+
+                                <li class="l-header-menu-item">
                                     <a href="contact.html" class="l-header-menu-link l-header-menu-link--contact">
                                         <span class="l-header-menu-text-en">CONTACT</span>
                                         <span class="l-header-menu-text-ja">お問い合わせ</span>
@@ -100,13 +107,13 @@
                         <a href="#">ALL</a>
                     </li>
                     <li class="works-detail-category-item">
-                        <a href="#">精密板金加工</a>
+                        <a href="#precision-sheet-metal-processing">精密板金加工</a>
                     </li>
                     <li class="works-detail-category-item">
-                        <a href="#">機械加工</a>
+                        <a href="#machine-processing">機械加工</a>
                     </li>
                     <li class="works-detail-category-item">
-                        <a href="#">筐体製作</a>
+                        <a href="#enclosure-manufacturing">筐体製作</a>
                     </li>
                     <li class="works-detail-category-item">
                         <a href="#">試作品・製品開発</a>
@@ -117,7 +124,7 @@
                 </ul><!-- /.works-detail-list -->
 
                 <div class="works-detail-list l-container u-ptb">
-                    <article class="works-detail-item">
+                    <article class="works-detail-item" id="precision-sheet-metal-processing">
                         <a href="works/control-box.html">
                             <div class="works-detail-img">
                                 <img src='assets/img/works/works.webp' width='800' height='533' alt='精密板金加工' decoding='async' />
@@ -133,40 +140,7 @@
                                 </p>
                         </a>
                     </article>
-                    <article class="works-detail-item">
-                        <a href="works/jig-base-frame.html">
-                            <div class="works-detail-img">
-                                <img src='assets/img/works/works2.webp' width='800' height='533' alt='精密板金加工' decoding='async' />
-                            </div><!-- / -->
-                            <div class="works-detail-content">
-                                <div class="works-detail-content-title">
-                                    <span class="works-detail-content-category">機械加工</span>
-                                    <h2 class="works-detail-content-name">治具ベースプレート</h2>
-                                </div><!-- / -->
-                                <p class="works-detail-content-text">
-                                    <span>高精度な平面度・直角度を要求される</span>
-                                    <span>治具部品を安定した品質で製作。</span>
-                                </p>
-                                </div>
-                        </a>
-                    </article>
-                    <article class="works-detail-item">
-                        <a href="works/equipment-frame.html">
-                            <div class="works-detail-img">
-                                <img src='assets/img/works/works3.webp' width='800' height='533' alt='精密板金加工' decoding='async' />
-                            </div><!-- / -->
-                            <div class="works-detail-content">
-                                <div class="works-detail-content-title">
-                                    <span class="works-detail-content-category">筐体製作</span>
-                                    <h2 class="works-detail-content-name">装置フレーム</h2>
-                                </div><!-- / -->
-                                <p class="works-detail-content-text">
-                                    <span>強度と軽量化を両立した装置フレーム。</span>
-                                    <span>用途に応じた最適な構造を提案。</span>
-                                </p>
-                                </div>
-                        </a>
-                    </article>
+
                     <article class="works-detail-item">
                         <a href="works/cover.html">
                             <div class="works-detail-img">
@@ -184,6 +158,25 @@
                                 </div>
                         </a>
                     </article>
+
+                    <article class="works-detail-item" id="machine-processing">
+                        <a href="works/jig-base-frame.html">
+                            <div class="works-detail-img">
+                                <img src='assets/img/works/works2.webp' width='800' height='533' alt='精密板金加工' decoding='async' />
+                            </div><!-- / -->
+                            <div class="works-detail-content">
+                                <div class="works-detail-content-title">
+                                    <span class="works-detail-content-category">機械加工</span>
+                                    <h2 class="works-detail-content-name">治具ベースプレート</h2>
+                                </div><!-- / -->
+                                <p class="works-detail-content-text">
+                                    <span>高精度な平面度・直角度を要求される</span>
+                                    <span>治具部品を安定した品質で製作。</span>
+                                </p>
+                                </div>
+                        </a>
+                    </article>
+
                     <article class="works-detail-item">
                         <a href="works/aluminum-machined-parts.html">
                             <div class="works-detail-img">
@@ -201,6 +194,25 @@
                                 </div>
                         </a>
                     </article>
+
+                    <article class="works-detail-item" id="enclosure-manufacturing">
+                        <a href="works/equipment-frame.html">
+                            <div class="works-detail-img">
+                                <img src='assets/img/works/works3.webp' width='800' height='533' alt='精密板金加工' decoding='async' />
+                            </div><!-- / -->
+                            <div class="works-detail-content">
+                                <div class="works-detail-content-title">
+                                    <span class="works-detail-content-category">筐体製作</span>
+                                    <h2 class="works-detail-content-name">装置フレーム</h2>
+                                </div><!-- / -->
+                                <p class="works-detail-content-text">
+                                    <span>強度と軽量化を両立した装置フレーム。</span>
+                                    <span>用途に応じた最適な構造を提案。</span>
+                                </p>
+                                </div>
+                        </a>
+                    </article>
+                    
                     <article class="works-detail-item">
                         <a href="works/unit-case.html">
                             <div class="works-detail-img">
@@ -267,6 +279,9 @@
                     </li>
                     <li class="l-footer-nav-item">
                         <a href="works.html" class="u-text-hover">実積</a>
+                    </li>
+                    <li class="l-footer-nav-item">
+                        <a href="recruit.html" class="u-text-hover">採用情報</a>
                     </li>
                     <li class="l-footer-nav-item">
                         <a href="contact.html" class="u-text-hover l-footer-nav--contact">お問い合わせ</a>

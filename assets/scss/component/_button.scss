@@ -22,6 +22,10 @@ component > button
             color: var(--color-navy);
         }
     }
+
+    &--center {
+        margin-inline: auto;
+    }
 }
 
 .c-button-large {
