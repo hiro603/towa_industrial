@@ -63,11 +63,11 @@ layout > header
 .l-header-logo--contact {
     color: var(--color-font-base);
 
-    .l-header-logo--white {
+    .l-header-logo-white {
         display: none;
     }
-    
-    .l-header-logo--black {
+
+    .l-header-logo-black {
         display: block;
     }
 }
@@ -218,6 +218,6 @@ layout > header
                 }
             }
         }
-        }
     }
+}
 

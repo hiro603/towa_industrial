@@ -6,7 +6,7 @@ page > thanks > thanks
 */
 .thanks {
     margin-top: 120px;
-    min-height: calc(100svh - footer - header);
+    min-height: calc(100svh - 120px); // margin-topと同値でヘッダー分を差し引く
     display: grid;
     place-items: center;
 }
