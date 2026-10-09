@@ -1,34 +1,36 @@
-@use "../global" as g;
+@use "../../global" as g;
 
 /*!
-component > pagination
+page > news > news-list
 ------------------------------
 */
-.c-pagination {
-    padding-block: 40px;
+.news-list-category {
+    padding-block: 40px 16px;
 }
 
-.c-pagination-list {
+.news-list-category-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 28px;
 }
 
-.c-pagination-link {
+.news-list-category-link {
     display: block;
     line-height: 1.5;
 
     @media (any-hover: hover) {
-        &[href]:hover {
+        &:hover {
             color: var(--color-navy);
         }
     }
 
     &[aria-current="page"] {
         color: var(--color-navy);
-        font-family: var(--font-family-en);
-        font-weight: bold;
         border-bottom: 1px solid var(--color-navy);
     }
+}
+
+.news-list-item .news-meta {
+    display: flex;
+    align-items: center;
 }
