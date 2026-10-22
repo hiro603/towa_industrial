@@ -16,7 +16,7 @@ layout > header
     width: 100%;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
-    @include g.mq() {
+    @include g.mq(lg) {
         padding: 23px 65px;
     }
 
@@ -32,7 +32,7 @@ layout > header
         }
 
         .l-header-menu-link:not(.l-header-menu-link--contact) {
-            @include g.mq() {
+            @include g.mq(lg) {
                 color: var(--color-font-base);
             }
         }
@@ -47,7 +47,7 @@ layout > header
     letter-spacing: 0.1em;
     color: var(--color-white);
 
-    @include g.mq() {
+    @include g.mq(lg) {
         font-size: 2rem;
     }
 }
@@ -81,7 +81,7 @@ layout > header
         display: none;
     }
 
-    @include g.mq() {
+    @include g.mq(lg) {
         display: block;
         position: static;
         width: auto;
@@ -91,7 +91,7 @@ layout > header
 }
 
 .l-header-menu-nav--contact {
-    @include g.mq() {
+    @include g.mq(lg) {
         color: var(--color-font-base);
     }
 }
@@ -104,7 +104,7 @@ layout > header
     top: 0;
     right: 0;
 
-    @include g.mq() {
+    @include g.mq(lg) {
         background-color: transparent;
         width: auto;
         padding: 0;
@@ -118,7 +118,7 @@ layout > header
     flex-direction: column;
     gap: 40px;
 
-    @include g.mq() {
+    @include g.mq(lg) {
         flex-direction: row;
         align-items: center;
     }
@@ -134,13 +134,13 @@ layout > header
 .l-header-menu-text-en {
     font-family: var(--font-family-en);
 
-    @include g.mq() {
+    @include g.mq(lg) {
         display: none;
     }
 }
 
 .l-header-menu-text-ja {
-    @include g.mq() {
+    @include g.mq(lg) {
         display: block;
     }
 }
@@ -150,7 +150,7 @@ layout > header
 .l-header-menu-item {
     color: var(--color-white);
 
-    @include g.mq() {
+    @include g.mq(lg) {
         &:not(:last-child) {
             color: var(--color-font-base);
         }
@@ -165,7 +165,7 @@ layout > header
 .l-header-menu-close-button {
     border-radius: 50%;
 
-    @include g.mq() {
+    @include g.mq(lg) {
         display: none;
     }
 }
@@ -182,7 +182,7 @@ layout > header
 }
 
 .l-header-menu-link--contact {
-    @include g.mq() {
+    @include g.mq(lg) {
         display: flex;
         align-items: center;
         gap: 9px;

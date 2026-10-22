@@ -4,3 +4,28 @@
 page > about > about-philosophy
 ------------------------------
 */
+.about-philosophy-body {
+    margin-top: 40px;
+    text-align: center;
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+}
+
+.about-philosophy-heading {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.about-philosophy-text {
+    margin-top: 24px;
+
+    @include g.mq() {
+        span {
+            display: block;
+        }
+    }
+}

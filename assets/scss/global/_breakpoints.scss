@@ -4,6 +4,7 @@
 // ------------------------------
 $breakpoints: (
     "md": 768px,
+    "lg": 1024px,
 );
 
 @mixin mq($breakpoint: md) {

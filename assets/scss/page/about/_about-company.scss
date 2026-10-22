@@ -4,3 +4,36 @@
 page > about > about-company
 ------------------------------
 */
+.about-company-table {
+    margin-top: 40px;
+
+    @include g.mq() {
+        margin-top: 60px;
+    }
+
+    .c-table-body {
+        min-width: 0;
+    }
+
+    .c-table-head,
+    .c-table-data {
+        padding: 12px 16px;
+
+        @include g.mq() {
+            padding: 16px 24px;
+        }
+    }
+
+    .c-table-head {
+        width: 100px;
+        white-space: nowrap;
+
+        @include g.mq() {
+            width: 20%;
+        }
+    }
+
+    .c-table-data {
+        width: auto;
+    }
+}
