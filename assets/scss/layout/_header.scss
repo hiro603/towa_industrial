@@ -121,6 +121,11 @@ layout > header
     @include g.mq(lg) {
         flex-direction: row;
         align-items: center;
+        gap: 24px;
+    }
+
+    @include g.mq(xl) {
+        gap: 40px;
     }
 }
 
