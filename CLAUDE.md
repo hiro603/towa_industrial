@@ -4,7 +4,7 @@
 
 ## 構成
 
-- index / service / about / works（`works/` 配下に実績詳細）/ news（お知らせ詳細）/ news-list / recruit / contact / privacy / thanks（quality は実装対象外）
+- index / service / about / works（`works/` 配下に実績詳細）/ news（お知らせ詳細）/ news-list / recruit / contact / privacy / thanks / quality（品質。2026-10-30 に Figma カンプから実装）
 - `assets/scss/` → `assets/css/`（FLOCSS × BEM。規約は web-coding スキルが正）
 - `_assets-src/` — 書き出し前の素材置き場
 

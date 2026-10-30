@@ -1,0 +1,54 @@
+@use "../../global" as g;
+
+/*!
+page > quality > quality-flow
+------------------------------
+*/
+.quality-flow {
+    background-color: var(--color-gray);
+}
+
+.quality-flow-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+
+    @include g.mq() {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 60px;
+    }
+}
+
+.quality-flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quality-flow-item-head-img-wrap {
+    width: 80px;
+    aspect-ratio: 1/1;
+    background-color: var(--color-border-light);
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+
+    img {
+        width: 32px;
+    }
+}
+
+.quality-flow-item-title {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.quality-flow-item-text {
+    margin-top: 10px;
+    text-align: center;
+
+    span {
+        display: block;
+    }
+}
